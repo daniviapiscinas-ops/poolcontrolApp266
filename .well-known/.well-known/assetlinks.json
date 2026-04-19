@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.danivia.pooltotalcontrol",
+    "sha256_cert_fingerprints":
+["29:F1:15:9C:08:F7:8C:66:10:A2:E3:D4:4E:1B:63:04:77:69:D7:4A:D3:11:5A:81:24:C4:B8:F5:90:E4:C1:E1"]
+  }
+}]
