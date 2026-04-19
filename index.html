@@ -7,7 +7,15 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>DANIVIA PISCINAS — Gestión de Piscinas</title>
+<title>Pool Total Control</title>
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="application-name" content="Pool Total Control">
+<meta name="apple-mobile-web-app-title" content="Pool Total Control">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="msapplication-TileImage" content="icons/icon-144.png">
+<meta name="msapplication-TileColor" content="#001f30">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -2079,6 +2087,16 @@ window.printReport = function() {
   w.document.close(); w.print();
 };
 
+</script>
+<!-- Service Worker registration -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/poolcontrolApp266/sw.js')
+        .then(reg => console.log('SW registrado:', reg.scope))
+        .catch(err => console.warn('SW error:', err));
+    });
+  }
 </script>
 </body>
 </html>
